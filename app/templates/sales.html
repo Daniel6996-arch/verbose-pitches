@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Interview pitches</h1>
-    {% for obj in interview %}
+<h1>Product pitches</h1>
+    {% for obj in sales %}
         <p>Example: {{ obj.content }}</p>
         <p>Author: {{ obj.author }}</p>
         <p>Upvote: {{ obj.upvote }}<span><button>upvote</button></span></p>

@@ -9,17 +9,17 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for( 'main.lines' ) }}" target="_blank">Pickup lines</a>
+          <a class="nav-link" href="{{ url_for( 'main.lines' ) }}" target="_self">Pickup lines</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Interview pitch</a>
+          <a class="nav-link" href="{{ url_for( 'main.interview' ) }}" target="_self">Interview pitch</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Product pitch</a>
+          <a class="nav-link" href="{{ url_for( 'main.product' ) }}" target="_self">Enterpreneur pitch</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Promotion pitch</a>
-          </li>
+            <a class="nav-link" href="{{ url_for( 'main.sales' ) }}" target="_self">Product pitch</a>
+        </li>
       </ul>
     </div>
   </nav>

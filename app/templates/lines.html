@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <span><h1>Pick up lines</h1><button>View pickup lines</button></span>
+<h1>Pick up lines</h1>
     {% for obj in pitches %}
         <p>Line: {{ obj.content }}</p>
         <p>Author: {{ obj.author }}</p>

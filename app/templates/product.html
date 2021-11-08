@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Enterpreneur pitches</h1>
+    {% for obj in product %}
+        <p>Example: {{ obj.content }}</p>
+        <p>Author: {{ obj.author }}</p>
+        <p>Upvote: {{ obj.upvote }}<span><button>upvote</button></span></p>
+        <p><span>Downvote: </span>{{ obj.downvote }}<span><button>downvote</button></span></p>
+    {% endfor %} 
+{% endblock %}
