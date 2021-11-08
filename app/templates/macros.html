@@ -1,10 +1,12 @@
 {% macro displayResults(pitch) %}
 
 {% for obj in pitch %}
-        <p>Example: {{ obj.content }}</p>
-        <p>Author: {{ obj.author }}</p>
-        <p>Upvote: {{ obj.upvote }}<span><button class="btn btn-light">upvote</button></span></p>
-        <p><span>Downvote: </span>{{ obj.downvote }}<span><button class="btn btn-light">downvote</button></span></p>
+        <div class="container border p-5" id="border">
+        <p><span class="blockquote-footer">Pitch: </span>{{ obj.content }}</p>
+        <p><span class="blockquote-footer">Author: </span>{{ obj.author }}</p>
+        <p>{{ obj.upvote }}<span><button class="btn btn-light">upvote</button></span></p>
+        <p>{{ obj.downvote }}<span><button class="btn btn-light">downvote</button></span></p>
+        </div>
 {% endfor %} 
 
 {% endmacro %}
