@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro%}
 
 {% block content %}
+
 <h1>Product pitches</h1>
-    {% for obj in sales %}
-        <p>Example: {{ obj.content }}</p>
-        <p>Author: {{ obj.author }}</p>
-        <p>Upvote: {{ obj.upvote }}<span><button>upvote</button></span></p>
-        <p><span>Downvote: </span>{{ obj.downvote }}<span><button>downvote</button></span></p>
-    {% endfor %} 
+{{ macro.displayResults(sales) }}
+
 {% endblock %}

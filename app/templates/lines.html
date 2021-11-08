@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
 {% block content %}
+
 <h1>Pick up lines</h1>
-    {% for obj in pitches %}
-        <p>Line: {{ obj.content }}</p>
-        <p>Author: {{ obj.author }}</p>
-        <p>Upvote: {{ obj.upvote }}<span><button>upvote</button></span></p>
-        <p>Downvote: {{ obj.downvote }}<span><button>downvote</button></span></p>
-    {% endfor %} 
+{{ macro.displayResults(pitches) }}
+
 {% endblock %}

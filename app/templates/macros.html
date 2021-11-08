@@ -1,0 +1,10 @@
+{% macro displayResults(pitch) %}
+
+{% for obj in pitch %}
+        <p>Example: {{ obj.content }}</p>
+        <p>Author: {{ obj.author }}</p>
+        <p>Upvote: {{ obj.upvote }}<span><button class="btn btn-light">upvote</button></span></p>
+        <p><span>Downvote: </span>{{ obj.downvote }}<span><button class="btn btn-light">downvote</button></span></p>
+{% endfor %} 
+
+{% endmacro %}
