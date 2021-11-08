@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Precious minute pitches</h1>
-<div>
     <span><h1>Pick up lines</h1><button>View pickup lines</button></span>
     {% for obj in pitches %}
         <p>Line: {{ obj.content }}</p>
@@ -10,9 +8,4 @@
         <p>Upvote: {{ obj.upvote }}<span><button>upvote</button></span></p>
         <p>Downvote: {{ obj.downvote }}<span><button>downvote</button></span></p>
     {% endfor %} 
-
-
-<span><h1>Product pitch</h1><button>View product pitches</button></span>
-<span><h1>Promotion pitch</h1><button>View promotion pitches</button></span>
-</div>
 {% endblock %}
