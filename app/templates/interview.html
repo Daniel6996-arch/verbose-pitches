@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
 
-<h1 class="border-bottom">Interview pitches</h1>
+<h1 class="border-bottom text-center">Interview pitches</h1>
     {{ macro.displayResults(interview) }}
 
 {% endblock %}

@@ -70,4 +70,6 @@ def sales():
     list.append(Pitch('There’s a better way to grow. HubSpot offers marketing, sales, service, and operations software that helps your business grow without compromise. Because ‘good for the business’ should also mean ‘good for the customer.','verbose',0,0))
     list.append(Pitch('We provide advice, banking, insurance, investment options, and guidance on how you can live generously. Money itself isn’t your end goal. (But it can help you get there.) Our financial guidance can help you move forward in life and reach your own higher purpose. We take the time to learn what matters most to you and provide resources that help you put your values into action.','verbose',0,0))
     title = 'Sales - Welcome to The best pitches resource online'
-    return render_template('sales.html', title = title, sales = list )        
+    return render_template('sales.html', title = title, sales = list )   
+
+
