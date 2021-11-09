@@ -19,10 +19,12 @@ dominate==2.6.0
 duplicity==0.8.12.0
 entrypoints==0.3
 fasteners==0.14.1
-Flask==1.1.1
+Flask==2.0.2
 Flask-Bootstrap==3.3.7.1
 Flask-Script==2.0.6
+Flask-SQLAlchemy==2.5.1
 future==0.18.2
+greenlet==1.1.2
 httplib2==0.14.0
 idna==2.8
 itsdangerous==2.0.1
@@ -47,7 +49,6 @@ paramiko==2.6.0
 pexpect==4.6.0
 Pillow==7.0.0
 protobuf==3.6.1
-psycopg2==2.9.1
 psycopg2-binary==2.9.1
 pycairo==1.16.2
 pycups==1.9.73
@@ -73,6 +74,7 @@ requests-unixsocket==0.2.0
 SecretStorage==2.3.1
 simplejson==3.16.0
 six==1.14.0
+SQLAlchemy==1.4.26
 systemd-python==234
 ttystatus==0.38
 ubuntu-advantage-tools==27.0
