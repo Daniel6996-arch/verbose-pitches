@@ -3,7 +3,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="flex-row">
+    <div id="flex-row" class="d-flex">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -24,10 +24,10 @@
         </ul>
       </div>
       <div>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right d-flex align-items-center mb-2 bg-info">
           {% if current_user.is_authenticated %}
-          <li style="color:white;padding:15px;">{{current_user.username}}</li>
           <li><a class="nav nav-link" href="{{url_for('auth.logout')}}">Sign out</a></li>
+          <li style="color:rgb(167, 148, 148);padding:15px;">{{current_user.username}}</li>
           {% else %}
           <li><a class="nav nav-link" href="{{url_for('auth.login')}}">Sign in</a></li>
           {%endif%}

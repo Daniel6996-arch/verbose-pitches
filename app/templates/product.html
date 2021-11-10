@@ -3,7 +3,40 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light container">
+    <a class="navbar-brand" href="{{ url_for( 'main.index' ) }}">Verbose Minute Pitches</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="flex-row" class="d-flex">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for( 'main.index' ) }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for( 'main.lines' ) }}" target="_self">Pickup lines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for( 'main.interview' ) }}" target="_self">Interview pitch</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for( 'main.sales' ) }}" target="_self">Product pitch</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="nav navbar-nav navbar-right d-flex align-items-center mb-2 bg-info">
+          {% if current_user.is_authenticated %}
+          <li><a class="nav nav-link" href="{{url_for('auth.logout')}}">Sign out</a></li>
+          <li style="color:rgb(167, 148, 148);padding:15px;">{{current_user.username}}</li>
+          {% else %}
+          <li><a class="nav nav-link" href="{{url_for('auth.login')}}">Sign in</a></li>
+          {%endif%}
+        </ul>
+      </div>
+    </div>
+  </nav>
 <p class="text-center container">One of the hardest presentations to make is the entrepreneurial pitch. You have a great idea for a business and you want someone to give you money to make it happen. The problem is that venture capitalists, angel investors, and even rich uncles are heavily predisposed against you. Why? Because 99% of the pitches they hear sound like sure-fire prescriptions to lose money!</p>
 <h1 class="border-bottom text-center">Enterpreneur pitches</h1>
 {{ macro.displayResults(product) }}

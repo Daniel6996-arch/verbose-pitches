@@ -2,8 +2,8 @@
 
 {% for obj in pitch %}
         <div class="container border p-1" id="border">
-        <p><span class="blockquote-footer">Pitch: </span>{{ obj.content }}</p>
-        <p><span class="blockquote-footer">Author: </span>{{ obj.author }}</p>
+        <p><span class="blockquote-footer text-primary">Pitch: </span>{{ obj.content }}</p>
+        <p><span class="blockquote-footer text-primary">Author: </span>{{ obj.author }}</p>
         <p>{{ obj.upvote }}<span><button class="btn btn-light">upvote</button></span></p>
         <p>{{ obj.downvote }}<span><button class="btn btn-light">downvote</button></span></p>
         </div>
