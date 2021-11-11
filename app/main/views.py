@@ -1,6 +1,8 @@
 from flask import render_template,request,redirect,url_for
 from . import main
 from ..models import Pitch
+from ..forms import PitchForm
+from flask_login import login_required
 
 @main.route('/')
 def index():
@@ -73,3 +75,16 @@ def sales():
     return render_template('sales.html', title = title, sales = list )   
 
 
+@main.route('/add-pitch', methods = ['GET','POST'])
+@login_required
+def new_pitch():
+    form = PitchForm()
+    pitch = Pitch('','',0,0)
+
+    if form.validate_on_submit():
+        author = form.author.data
+        pitch = form.pitch.data
+        new_pitch = Pitch(pitch,author,0,0)
+       # return redirect(url_for('.movie',id = movie.id ))
+
+    return render_template('indexy.html',pitch_form=form, pitch=pitch)

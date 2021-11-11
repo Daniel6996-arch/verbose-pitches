@@ -1,11 +1,48 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
-<div class="container">
-    <p class="text-center">In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful?</p>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light container">
+    <a class="navbar-brand" href="{{ url_for( 'main.index' ) }}">Verbose Minute Pitches</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="flex-row" class="d-flex">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for( 'main.index' ) }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for( 'main.lines' ) }}" target="_self">Pickup lines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for( 'main.interview' ) }}" target="_self">Interview pitch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for( 'main.product' ) }}" target="_self">Enterpreneur pitch</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for( 'main.sales' ) }}" target="_self">Product pitch</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="nav navbar-nav navbar-right d-flex align-items-center mb-2 bg-info">
+          {% if current_user.is_authenticated %}
+          <li><a class="nav nav-link" href="{{url_for('auth.logout')}}">Sign out</a></li>
+          <li style="color:rgb(167, 148, 148);padding:15px;">{{current_user.username}}</li>
+          {% else %}
+          <li><a class="nav nav-link" href="{{url_for('auth.login')}}">Sign in</a></li>
+          {%endif%}
+        </ul>
+      </div>
+    </div>
+</nav>
 <div class="border p-5">
+    <p class="text-center">In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful?</p>
     <p class="text-center container">It’s the inevitable phrase that comes at the beginning of nearly every job interview, regardless of industry: ‘So, tell me about yourself.’ For such a seemingly easy task — talking about who you are and what you do — it can warrant much anxiety.</p>
     <p class="text-center container">After all, when you only have a few breaths to pitch your services and expertise, stumbling through your speech can make you look ill-prepared and lacking self-confidence. At the heart of this paragraph are the basics: essential information that’s needed to set up the scene for the interview.</p>
 </div>
+
 {% endblock %}
